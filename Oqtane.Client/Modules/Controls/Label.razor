@@ -4,12 +4,12 @@
 @if (!string.IsNullOrEmpty(HelpText))
 {
     <span class="@_spanclass" data-tip="@((MarkupString)@_helptext)">
-        <Oqtane.Modules.Controls.Label for="@For" class="@_labelclass">@ChildContent</Oqtane.Modules.Controls.Label> <img src="images/help.png" />
+        <label for="@For" class="@_labelclass">@ChildContent</label> <img src="images/help.png" />
     </span>
 }
 else
 {
-    <Oqtane.Modules.Controls.Label for="@For" class="@_labelclass">@ChildContent</Oqtane.Modules.Controls.Label>
+    <label for="@For" class="@_labelclass">@ChildContent</label>
 }
 
 @code {

@@ -46,7 +46,7 @@
             {
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label class="control-label">@Localizer["Page.Manage"] </Oqtane.Modules.Controls.Label>
+                        <label class="control-label">@Localizer["Page.Manage"] </label>
                     </div>
                 </div>
                 <div class="row d-flex mb-2">
@@ -109,7 +109,7 @@
 
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="Module" class="control-label">@Localizer["Module.Manage"]</Oqtane.Modules.Controls.Label>
+                        <label for="Module" class="control-label">@Localizer["Module.Manage"]</label>
                         <select class="form-select" @onchange="(e => ModuleTypeChanged(e))">
                             <option value="new">@Localizer["Module.AddNew"]</option>
                             @if (PageState.Page.UserId == null)
@@ -178,13 +178,13 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="Title" class="control-label">@Localizer["Title"]</Oqtane.Modules.Controls.Label>
+                        <label for="Title" class="control-label">@Localizer["Title"]</label>
                         <input type="text" name="Title" class="form-control" @bind="@_title" />
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="Pane" class="control-label">@Localizer["Pane"]</Oqtane.Modules.Controls.Label>
+                        <label for="Pane" class="control-label">@Localizer["Pane"]</label>
                         <select class="form-select" @bind="@_pane">
                             @foreach (string pane in PageState.Page.Panes)
                             {
@@ -195,7 +195,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="Insert" class="control-label">@Localizer["Location"]</Oqtane.Modules.Controls.Label>
+                        <label for="Insert" class="control-label">@Localizer["Location"]</label>
                         <select class="form-select" @bind="@_location">
                             <option value="@int.MinValue">@Localizer["LocationTop"]</option>
                             <option value="@int.MaxValue">@Localizer["LocationBottom"]</option>
@@ -204,7 +204,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="Container" class="control-label">@Localizer["Container"]</Oqtane.Modules.Controls.Label>
+                        <label for="Container" class="control-label">@Localizer["Container"]</label>
                         <select class="form-select" @bind="@_containerType">
                             @if (_containers != null)
                             {
@@ -218,7 +218,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <Oqtane.Modules.Controls.Label for="visibility" class="control-label">@Localizer["Visibility"]</Oqtane.Modules.Controls.Label>
+                        <label for="visibility" class="control-label">@Localizer["Visibility"]</label>
                         <select class="form-select" @bind="@_visibility">
                             <option value="view">@Localizer["VisibilityView"]</option>
                             <option value="edit">@Localizer["VisibilityEdit"]</option>
