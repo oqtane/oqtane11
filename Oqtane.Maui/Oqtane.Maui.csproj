@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net10.0-windows10.0.19041.0</TargetFrameworks>
+        	<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net11.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build android, ios, and maccatalyst -->
-    <!-- <TargetFrameworks>net10.0-android;net10.0-ios;net10.0-maccatalyst</TargetFrameworks> -->
+        	<!-- <TargetFrameworks>net11.0-android</TargetFrameworks> -->
+        	<!-- <TargetFrameworks Condition="!$([MSBuild]::IsOSPlatform('linux'))">$(TargetFrameworks);net11.0-ios;net11.0-maccatalyst</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>Oqtane.Maui</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -18,17 +19,17 @@
 		<ApplicationId>com.oqtane.maui</ApplicationId>
     
 		<!-- Versions -->
-		<ApplicationDisplayVersion>10.3.1</ApplicationDisplayVersion>
+		<ApplicationDisplayVersion>11.0.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
 		<!-- To develop, package, and publish an app to the Microsoft Store, see: https://aka.ms/MauiTemplateUnpackaged -->
 		<WindowsPackageType>None</WindowsPackageType>
     
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
-		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+        	<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+        	<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">17.0</SupportedOSPlatformVersion>
+        	<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">24.0</SupportedOSPlatformVersion>
+        	<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+        	<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -54,11 +55,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="10.0.14" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="10.0.14" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="10.0.14" />
-		<PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.14" />
-		<PackageReference Include="System.Net.Http.Json" Version="10.0.14" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="11.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="11.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="11.0.0 />
+		<PackageReference Include="Microsoft.Extensions.Localization" Version="11.0.0" />
+		<PackageReference Include="System.Net.Http.Json" Version="11.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.AspNetCore.Components.WebView.Maui" Version="$(MauiVersion)" />
@@ -66,10 +67,10 @@
 
 	<ItemGroup>
 		<Reference Include="Oqtane.Client">
-			<HintPath>..\Oqtane.Server\bin\Debug\net10.0\Oqtane.Client.dll</HintPath>
+			<HintPath>..\Oqtane.Server\bin\Debug\net11.0\Oqtane.Client.dll</HintPath>
 		</Reference>
 		<Reference Include="Oqtane.Shared">
-			<HintPath>..\Oqtane.Server\bin\Debug\net10.0\Oqtane.Shared.dll</HintPath>
+			<HintPath>..\Oqtane.Server\bin\Debug\net11.0\Oqtane.Shared.dll</HintPath>
 		</Reference>
 	</ItemGroup>
 
