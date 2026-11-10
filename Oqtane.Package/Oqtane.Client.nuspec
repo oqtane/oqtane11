@@ -19,10 +19,10 @@
     <dependencies>
       <group targetFramework="net11.0">
         <dependency id="Oqtane.Shared" version="11.0.0" exclude="Build,Analyzers" />
-        <dependency id="Microsoft.AspNetCore.Components.WebAssembly" version="11.0.0-rc.3.26522.148" exclude="Build,Analyzers" />
-        <dependency id="Microsoft.AspNetCore.Components.WebAssembly.Authentication" version="11.0.0-rc.3.26522.148" exclude="Build,Analyzers" />
-        <dependency id="Microsoft.Extensions.Localization" version="11.0.0-rc.3.26522.148" exclude="Build,Analyzers" />
-        <dependency id="Microsoft.Extensions.Http" version="11.0.0-rc.3.26522.148" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.WebAssembly" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Components.WebAssembly.Authentication" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Localization" version="11.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Http" version="11.0.0" exclude="Build,Analyzers" />
         <dependency id="Radzen.Blazor" version="12.1.10" exclude="Build,Analyzers" />
       </group>
     </dependencies>
