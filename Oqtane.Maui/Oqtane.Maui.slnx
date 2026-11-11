@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Oqtane.Maui.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
+</Solution>
